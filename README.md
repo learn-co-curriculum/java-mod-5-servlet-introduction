@@ -43,13 +43,13 @@ A servlet class that extends `HttpServlet` would override some or all of these m
 based on the application requirements. For example, we might override the `doGet()` method
 to accept user input from an HTML form and generate a response based on the form data.
 
-The `service` and various `do...()` methods take as parameters an `HttpServletRequest` instance and an `HttpServletResponse` instance.
+The `service` and various `do...()` methods take two parameters:
 
-- The `HttpServletRequest` instance provides information to the
-  servlet regarding the HTTP request, such as request parameter names and values.    
-- The `HttpServletResponse` instance provides HTTP-specific functionality
-  to produce the response, such as specifying content length, MIME type,
-  and providing an output stream for response content.
+1. An object that implements `HttpServletRequest`, which provides information to the
+   servlet regarding the HTTP request, such as request parameter names and values.    
+2. An object that implements `HttpServletResponse`, which provides HTTP-specific
+   functionality to generate a response, such as specifying content length, MIME type,
+   and creating an output stream for the content.
 
 ## Servlet Container
 
